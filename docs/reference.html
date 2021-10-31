@@ -2445,13 +2445,13 @@ ERROR:
 
 <p>Arguments given in function calls are automatically cast to the declared parameter type:</p>
 
-<pre><code class="language-tweakflow">&gt; f(&quot;3&quot;, 9837) # casts the first argument to long, and the second argument to string
+<pre><code class="language-tweakflow">&gt; f(&quot;3&quot;, 9837) # casts the first argument to string, and the second argument to long
 &quot;3-9837&quot;
 
-&gt; f(&quot;abc&quot;, &quot;def&quot;) # cannot cast first argument to long
+&gt; f(&quot;abc&quot;, &quot;def&quot;) # cannot cast second argument to long
 ERROR:
   code: CAST_ERROR
-  message: Cannot cast abc to long
+  message: Cannot cast def to long
 </code></pre>
 
 <h4 id="return-value-casting">Return value casting</h4>
